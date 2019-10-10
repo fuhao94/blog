@@ -7,6 +7,7 @@ module.exports = {
 
   themeConfig: {
     sidebarDepth: 2,
+
     lastUpdated: "上次更新", // 文档更新时间
 
     // displayAllHeaders: true, // 显示所有标题链接
