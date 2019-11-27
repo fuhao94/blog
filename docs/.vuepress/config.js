@@ -16,7 +16,8 @@ module.exports = {
       "/Frontend/": [
         "CSS" /* /Frontend/Css.html */,
         "" /* /Frontend/ */,
-        "Vue" /* /Frontend/Vue.html */
+        "Vue" /* /Frontend/Vue.html */,
+        "设计模式" /* /Frontend/设计模式.html */
       ]
     },
 
