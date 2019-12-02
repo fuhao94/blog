@@ -283,4 +283,16 @@ function binarySearch(data, dest) {
 }
 const arr = [-34, 1, 3, 4, 5, 8, 34, 45, 65, 87];
 binarySearch(arr, 4); // 3
+
+/**
+ * 数组彻底降维
+ * @param arr
+ * @return {*[]}
+ */
+const flattenDeep = arr =>
+  Array.isArray(arr)
+    ? arr.reduce((a, b) => [...a, ...flattenDeep(b)], [])
+    : [arr];
+
+flattenDeep([1, [[2], [3, [4]], 5]]); // [1, 2, 3, 4, 5]
 ```
