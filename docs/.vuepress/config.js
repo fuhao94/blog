@@ -4,7 +4,7 @@ module.exports = {
   description: "Personal technical documentation blog",
 
   themeConfig: {
-    sidebarDepth: 2,
+    sidebarDepth: 1,
 
     lastUpdated: "上次更新", // 文档更新时间
 
@@ -21,7 +21,11 @@ module.exports = {
         {
           title: 'JavaScript', // 侧边栏名称
           children: [
-            '/note/js/test'
+            '/note/js/let和const命令',
+            '/note/js/构造函数',
+            '/note/js/深浅拷贝',
+            '/note/js/防抖',
+            '/note/js/节流',
           ]
         },
       ]
