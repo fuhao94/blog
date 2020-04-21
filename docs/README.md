@@ -3,7 +3,7 @@ home: true
 date: 2019-10-10
 heroImage:
 actionText: 查看 →
-actionLink: /Frontend/CSS/
+actionLink: /note/HTML&&CSS/
 features:
   - title: 简洁至上
     details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。

@@ -1,7 +1,5 @@
 // .vuepress/config.js
 module.exports = {
-  base: "/blog/", // 仓库名字是blog
-
   title: "ZhangFuHao",
   description: "Personal technical documentation blog",
 
@@ -13,12 +11,19 @@ module.exports = {
     // displayAllHeaders: true, // 显示所有标题链接
 
     sidebar: {
-      "/Frontend/": [
-        "CSS" /* /Frontend/Css.html */,
-        "" /* /Frontend/ */,
-        "Vue" /* /Frontend/Vue.html */,
-        "设计模式" /* /Frontend/设计模式.html */,
-        "数据结构" /* /Frontend/数据结构.html */
+      "/note/": [
+        {
+          title: 'HTML && CSS', // 侧边栏名称
+          children: [
+            '/note/css/垂直居中布局'
+          ]
+        },
+        {
+          title: 'JavaScript', // 侧边栏名称
+          children: [
+            '/note/js/test'
+          ]
+        },
       ]
     },
 
