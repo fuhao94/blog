@@ -1,10 +1,10 @@
 <template>
-  <div>111111</div>
+  <button>按钮</button>
 </template>
 
 <script>
 export default {
-  name: "home"
+  name: "z-button"
 };
 </script>
 

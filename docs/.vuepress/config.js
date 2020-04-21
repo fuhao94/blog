@@ -1,7 +1,7 @@
 // .vuepress/config.js
 module.exports = {
-  title: "ZhangFuHao",
-  description: "Personal technical documentation blog",
+  title: "张福浩",
+  description: "随手笔记",
 
   themeConfig: {
     sidebarDepth: 1,
@@ -13,19 +13,25 @@ module.exports = {
     sidebar: {
       "/note/": [
         {
-          title: 'HTML && CSS', // 侧边栏名称
+          title: 'HTML && CSS',
           children: [
-            '/note/css/垂直居中布局'
+            'css/垂直居中布局'
           ]
         },
         {
-          title: 'JavaScript', // 侧边栏名称
+          title: 'JavaScript',
           children: [
-            '/note/js/let和const命令',
-            '/note/js/构造函数',
-            '/note/js/深浅拷贝',
-            '/note/js/防抖',
-            '/note/js/节流',
+            'js/let和const命令',
+            'js/构造函数',
+            'js/深浅拷贝',
+            'js/防抖',
+            'js/节流',
+          ]
+        },
+        {
+          title: 'VUE',
+          children: [
+            '/note/vue/双向绑定/双向绑定',
           ]
         },
       ]
