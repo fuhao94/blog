@@ -1,5 +1,7 @@
 // .vuepress/config.js
 module.exports = {
+  base: "/blog/", // 仓库名字是blog
+
   title: "张福浩",
   description: "随手笔记",
 

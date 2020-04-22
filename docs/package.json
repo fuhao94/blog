@@ -1,5 +1,5 @@
 {
   "scripts": {
-    "deploy": "bash deploy.sh"
+    "build": "bash deploy.sh"
   }
 }
