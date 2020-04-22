@@ -31,7 +31,7 @@ module.exports = {
         {
           title: 'VUE',
           children: [
-            '/note/vue/双向绑定/双向绑定',
+            'vue/双向绑定/双向绑定',
           ]
         },
       ]
