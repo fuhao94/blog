@@ -39,7 +39,7 @@ module.exports = {
 
     nav: [
       { text: "Home", link: "/" }, // 根路径
-      { text: "Guide", link: "/guide/" }
+      { text: "Github", link: "https://github.com/isEddrick" }
     ]
   }
 };
