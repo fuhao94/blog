@@ -15,32 +15,45 @@ module.exports = {
     sidebar: {
       "/note/": [
         {
-          title: 'HTML && CSS',
+          title: 'HTML && CSS篇',
           children: [
             'css/垂直居中布局'
           ]
         },
         {
-          title: 'JavaScript',
+          title: 'JavaScript篇',
           children: [
             'js/let和const命令',
             'js/构造函数',
             'js/深浅拷贝',
+            'js/定时器',
+            'js/原型链',
+            'js/闭包',
             'js/防抖',
             'js/节流',
-            'js/定时器',
+            'js/事件机制',
+            'js/垃圾回收和内存泄漏',
           ]
         },
         {
-          title: 'Vue',
+          title: 'Vue篇',
           children: [
             'vue/双向绑定/双向绑定',
           ]
         },
         {
-          title: 'Webpack',
+          title: 'Webpack篇',
           children: [
+            'webpack/构建流程',
             'webpack/使用姿势',
+          ]
+        },
+        {
+          title: '网络篇',
+          children: [
+            'network/GET&POST区别',
+            'network/HTTP状态码',
+            'network/浏览器加载过程',
           ]
         },
       ]
