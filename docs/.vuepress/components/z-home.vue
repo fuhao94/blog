@@ -26,13 +26,13 @@ export default {
         onRedirect(route) {
             switch (route) {
                 case 'js':
-                    window.location = '/note/js/let和const命令';
+                    window.location = '/blog/note/js/let和const命令';
                     break;
                 case 'css':
-                    window.location = '/note/css/垂直居中布局';
+                    window.location = '/blog/note/css/垂直居中布局';
                     break;
                 case 'vue':
-                    window.location = '/note/vue/双向绑定/双向绑定';
+                    window.location = '/blog/note/vue/双向绑定/双向绑定';
                     break;
             }
 

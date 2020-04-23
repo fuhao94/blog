@@ -28,12 +28,19 @@ module.exports = {
             'js/深浅拷贝',
             'js/防抖',
             'js/节流',
+            'js/定时器',
           ]
         },
         {
-          title: 'VUE',
+          title: 'Vue',
           children: [
             'vue/双向绑定/双向绑定',
+          ]
+        },
+        {
+          title: 'Webpack',
+          children: [
+            'webpack/使用姿势',
           ]
         },
       ]
