@@ -17,7 +17,8 @@ module.exports = {
         {
           title: 'HTML && CSS篇',
           children: [
-            'css/垂直居中布局'
+            'css/垂直居中布局',
+            'css/太极图'
           ]
         },
         {
@@ -33,6 +34,8 @@ module.exports = {
             'js/节流',
             'js/事件机制',
             'js/垃圾回收和内存泄漏',
+            'js/数组处理',
+            'js/promise',
           ]
         },
         {
@@ -53,6 +56,7 @@ module.exports = {
           children: [
             'network/GET&POST区别',
             'network/HTTP状态码',
+            'network/请求跨域',
             'network/浏览器加载过程',
           ]
         },
