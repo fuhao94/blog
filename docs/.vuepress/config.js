@@ -17,6 +17,8 @@ module.exports = {
         {
           title: 'HTML && CSS篇',
           children: [
+            'css/选择器',
+            'css/position',
             'css/垂直居中布局',
             'css/太极图'
           ]
@@ -58,6 +60,19 @@ module.exports = {
             'network/HTTP状态码',
             'network/请求跨域',
             'network/浏览器加载过程',
+          ]
+        },
+        {
+          title: '算法',
+          children: [
+            'algorithm/二分查找',
+            'algorithm/排序',
+          ]
+        },
+        {
+          title: '面试题',
+          children: [
+            'interview/JS',
           ]
         },
       ]

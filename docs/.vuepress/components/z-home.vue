@@ -29,7 +29,7 @@ export default {
                     window.location = '/blog/note/js/let和const命令';
                     break;
                 case 'css':
-                    window.location = '/blog/note/css/垂直居中布局';
+                    window.location = '/blog/note/css/选择器';
                     break;
                 case 'vue':
                     window.location = '/blog/note/vue/双向绑定/双向绑定';
