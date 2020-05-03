@@ -27,7 +27,6 @@ module.exports = {
           title: 'JavaScript篇',
           children: [
             'js/let和const命令',
-            'js/ES6新特性',
             'js/class',
             'js/构造函数',
             'js/深浅拷贝',
@@ -46,7 +45,8 @@ module.exports = {
           title: 'Vue篇',
           children: [
             'vue/双向绑定/双向绑定',
-            'vue/vuex',
+            'vue/EventBus',
+            'vue/vuex/vuex',
           ]
         },
         {
@@ -63,6 +63,7 @@ module.exports = {
             'network/HTTP状态码',
             'network/请求跨域',
             'network/浏览器加载过程',
+            'network/三次握手四次挥手',
           ]
         },
         {
@@ -76,6 +77,7 @@ module.exports = {
           title: '面试题',
           children: [
             'interview/JS',
+            'interview/H5',
           ]
         },
       ]
