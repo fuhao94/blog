@@ -1,4 +1,4 @@
-function VueInit() {
+export function VueInit() {
     const options = this.$options;
 
     if(options.store) {
@@ -12,10 +12,28 @@ function VueInit() {
     }
 }
 
+// 劫持getters 注入store.state
+function registerGetter(store, getterName, getterFn) {
+    Object.defineProperty(store.getters, getterName, {
+        get: () => {
+            return getterFn(store.state)
+        }
+    })
+}
+
+// 将对象中的每一个值放入到传入的函数中作为参数执行
+function forEachValue(obj, fn) {
+    Object.keys(obj).forEach(key => fn(obj[key], key));
+}
+
 export class store {
     constructor(options = {}, Vue) {
         this.options = options;
-        Vue.mixin({ beforeCreate: VueInit })
+        this.getters = {};
+        Vue.mixin({ beforeCreate: VueInit });
+        forEachValue(options.getters, (getterFn, getterName) => {
+            registerGetter(this, getterName, getterFn);
+        })
     }
 
     get state() {
