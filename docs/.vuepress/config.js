@@ -27,6 +27,7 @@ module.exports = {
           title: 'JavaScript篇',
           children: [
             'js/let和const命令',
+            'js/ES6新特性',
             'js/class',
             'js/构造函数',
             'js/深浅拷贝',
@@ -45,6 +46,7 @@ module.exports = {
           title: 'Vue篇',
           children: [
             'vue/双向绑定/双向绑定',
+            'vue/vuex',
           ]
         },
         {

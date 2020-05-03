@@ -14,7 +14,9 @@ let与const都是只在声明所在的块级作用域内有。let声明的变量
 })();
 
 // 实现const
-var a = Object.freeze({key: 'value'})
+// var a = Object.freeze({key: 'value'})
+
+// Object.defineProperty()
 ```
 
 [JS作用域](https://www.cnblogs.com/fundebug/p/10535230.html)
