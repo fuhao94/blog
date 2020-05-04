@@ -14,9 +14,25 @@ let与const都是只在声明所在的块级作用域内有。let声明的变量
 })();
 
 // 实现const
-// var a = Object.freeze({key: 'value'})
-
-// Object.defineProperty()
+function myConst(key, val) {
+    window.key = val
+    Object.defineProperty(window, key, {
+        enumerable: false,
+        configurable: false,
+        get: function () {
+            return val
+        },
+        set: function (value) {
+            if (value !== val) {
+                throw new TypeError('不能重复定义')
+            } else {
+                return val
+            }
+        }
+    })
+}
+myConst('a',1)
+a = 10 //Uncaught TypeError: 不能重复定义
 ```
 
 [JS作用域](https://www.cnblogs.com/fundebug/p/10535230.html)
