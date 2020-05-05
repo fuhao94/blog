@@ -49,6 +49,7 @@ module.exports = {
             'vue/双向绑定/双向绑定',
             'vue/EventBus',
             'vue/vuex/vuex',
+            'vue/router/router',
           ]
         },
         {
@@ -66,6 +67,7 @@ module.exports = {
             'network/请求跨域',
             'network/浏览器加载过程',
             'network/三次握手四次挥手',
+            'network/服务端渲染vs客户端渲染',
           ]
         },
         {
