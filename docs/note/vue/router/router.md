@@ -21,6 +21,12 @@ hash: 虽然出现在 URL 中，但不会被包含在 http 请求中，对后端
 
 history: history 利用了 html5 history interface 中新增的 pushState() 和 replaceState() 方法。这两个方法应用于浏览器记录栈，在当前已有的 back、forward、go 基础之上，它们提供了对历史记录修改的功能。只是当它们执行修改时，虽然改变了当前的 URL ，但浏览器不会立即向后端发送请求。
 
+### 原理
+
+1. hash 模式的原理是 onhashchange 事件，可以在 window 对象上监听这个事件。
+
+2. history ：hashchange 只能改变 # 后面的代码片段，history api （pushState、replaceState、go、back、forward） 则给了前端完全的自由，通过在window对象上监听popState()事件。
+
 ## 组件缓存keep-alive
 
 - include - 字符串或正则表达式。只有名称匹配的组件会被缓存。
@@ -36,3 +42,17 @@ history: history 利用了 html5 history interface 中新增的 pushState() 和 
 ### 动态移除缓存
 
 `ps:尤大的意思是把 include 绑定一个计算属性`
+
+## VueRouter遇到的一些问题
+
+### 点击相同tab（跳转相同路由）报错
+
+```js
+import VueRouter from 'vue-router';
+
+// fix Uncaught (in promise) 修复跳转相同路由报错
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+    return originalPush.call(this, location).catch(err => err);
+};
+```

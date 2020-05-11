@@ -48,9 +48,11 @@ module.exports = {
           title: 'Vue篇',
           children: [
             'vue/双向绑定/双向绑定',
-            'vue/EventBus',
+            'vue/组件通信',
             'vue/vuex/vuex',
             'vue/router/router',
+            'vue/Virtual DOM',
+            'vue/spa&mpa',
           ]
         },
         {

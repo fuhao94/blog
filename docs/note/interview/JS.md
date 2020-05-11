@@ -47,6 +47,18 @@ var f = function fact(x) {
  alert(fact());   // Uncaught ReferenceError: fact is not defined
 ```
 
+## Object.freeze()
+
+使用场景
+
+1. 你需要一个非常干净且高度可定制的对象当作数据字典的时候；
+
+2. 想节省hasOwnProperty带来的一丢丢性能损失并且可以偷懒少些一点代码的时候
+
+### Object.freeze(null)
+
+![对比图](https://user-gold-cdn.xitu.io/2018/4/11/162b2ef76658b2f1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
 ## 代码题1
 
 ```js
