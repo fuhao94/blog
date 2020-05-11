@@ -51,6 +51,7 @@ module.exports = {
             'vue/组件通信',
             'vue/vuex/vuex',
             'vue/router/router',
+            'vue/首屏优化',
             'vue/Virtual DOM',
             'vue/spa&mpa',
           ]
@@ -65,8 +66,8 @@ module.exports = {
         {
           title: '网络篇',
           children: [
+            'network/HTTP',
             'network/GET&POST区别',
-            'network/HTTP状态码',
             'network/请求跨域',
             'network/浏览器加载过程',
             'network/三次握手四次挥手',
