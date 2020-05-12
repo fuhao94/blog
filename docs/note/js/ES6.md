@@ -23,3 +23,11 @@ set.size // 1
 set.add({});
 set.size // 2
 ```
+
+## Module
+
+与CommonJS区别
+
+1. CommonJS模块输出的是一个值的拷贝，ES6 模块输出的是值的引用；
+
+2. CommonJS 模块是运行时加载，ES6 模块是编译时输出接口。

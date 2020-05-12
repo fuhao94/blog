@@ -61,6 +61,7 @@ module.exports = {
           children: [
             'webpack/构建流程',
             'webpack/使用姿势',
+            'webpack/HMR',
           ]
         },
         {
