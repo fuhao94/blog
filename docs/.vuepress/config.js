@@ -19,14 +19,13 @@ module.exports = {
           children: [
             'css/选择器',
             'css/position',
-            'css/垂直居中布局',
-            'css/太极图'
+            'css/太极图',
+            'css/垂直居中布局'
           ]
         },
         {
           title: 'JavaScript篇',
           children: [
-            'js/let和const命令',
             'js/ES6',
             'js/class',
             'js/promise',
@@ -41,19 +40,20 @@ module.exports = {
             'js/事件机制',
             'js/数组处理',
             'js/类型判断',
+            'js/let和const命令',
             'js/垃圾回收和内存泄漏',
           ]
         },
         {
           title: 'Vue篇',
           children: [
-            'vue/双向绑定/双向绑定',
             'vue/组件通信',
-            'vue/vuex/vuex',
-            'vue/router/router',
             'vue/首屏优化',
-            'vue/Virtual DOM',
             'vue/spa&mpa',
+            'vue/vuex/vuex',
+            'vue/Virtual DOM',
+            'vue/router/router',
+            'vue/双向绑定/双向绑定',
           ]
         },
         {
@@ -68,8 +68,9 @@ module.exports = {
           title: '网络篇',
           children: [
             'network/HTTP',
-            'network/GET&POST区别',
             'network/请求跨域',
+            'network/常用请求头',
+            'network/GET&POST区别',
             'network/浏览器加载过程',
             'network/三次握手四次挥手',
             'network/服务端渲染vs客户端渲染',
@@ -78,8 +79,8 @@ module.exports = {
         {
           title: '算法',
           children: [
-            'algorithm/二分查找',
             'algorithm/排序',
+            'algorithm/二分查找',
           ]
         },
         {
