@@ -40,6 +40,7 @@ module.exports = {
             'js/事件机制',
             'js/数组处理',
             'js/类型判断',
+            'js/数据不可变性',
             'js/let和const命令',
             'js/垃圾回收和内存泄漏',
           ]
