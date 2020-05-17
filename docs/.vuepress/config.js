@@ -71,8 +71,8 @@ module.exports = {
             'network/请求跨域',
             'network/常用请求头',
             'network/GET&POST区别',
-            'network/浏览器加载过程',
             'network/三次握手四次挥手',
+            'network/输入URL发生了什么',
             'network/服务端渲染vs客户端渲染',
           ]
         },
