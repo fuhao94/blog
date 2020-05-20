@@ -2,7 +2,7 @@
 module.exports = {
   base: "/blog/", // 仓库名字是blog
 
-  title: "张福浩",
+  title: "笔记",
   description: "随手笔记",
 
   themeConfig: {
