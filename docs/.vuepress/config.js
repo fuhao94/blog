@@ -55,6 +55,7 @@ module.exports = {
             'vue/Virtual DOM',
             'vue/router/router',
             'vue/双向绑定/双向绑定',
+            'vue/动态加载并注册组件',
           ]
         },
         {
