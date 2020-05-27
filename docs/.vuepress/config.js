@@ -39,8 +39,8 @@ module.exports = {
             'js/构造函数',
             'js/事件机制',
             'js/数组处理',
-            'js/类型判断',
             'js/数据不可变性',
+            'js/判断数据类型',
             'js/let和const命令',
             'js/设计模式/设计模式',
             'js/垃圾回收和内存泄漏',
@@ -57,6 +57,7 @@ module.exports = {
             'vue/router/router',
             'vue/双向绑定/双向绑定',
             'vue/动态加载并注册组件',
+            'vue/computed && watch',
           ]
         },
         {
