@@ -92,6 +92,7 @@ module.exports = {
           children: [
             'interview/JS',
             'interview/H5',
+            'interview/铃盛',
           ]
         },
       ]
