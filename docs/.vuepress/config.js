@@ -93,6 +93,7 @@ module.exports = {
             'interview/JS',
             'interview/H5',
             'interview/铃盛',
+            'interview/美团',
           ]
         },
       ]
