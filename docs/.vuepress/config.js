@@ -85,6 +85,7 @@ module.exports = {
           children: [
             'algorithm/排序',
             'algorithm/二分查找',
+            'algorithm/数组',
           ]
         },
         {

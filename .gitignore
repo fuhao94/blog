@@ -6,7 +6,7 @@ npm-debug.log
 .idea
 src/components/mtue
 .history
-
+package-lock.json
 /build/webpack.local.conf.extra.js
 
 /scripts/iconfont
