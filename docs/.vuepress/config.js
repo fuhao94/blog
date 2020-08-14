@@ -15,7 +15,7 @@ module.exports = {
     sidebar: {
       "/note/": [
         {
-          title: 'HTML && CSS篇',
+          title: 'HTML && CSS',
           children: [
             'css/选择器',
             'css/position',
@@ -24,7 +24,7 @@ module.exports = {
           ]
         },
         {
-          title: 'JavaScript篇',
+          title: 'JavaScript',
           children: [
             'js/ES6',
             'js/class',
@@ -47,7 +47,7 @@ module.exports = {
           ]
         },
         {
-          title: 'Vue篇',
+          title: 'Vue',
           children: [
             'vue/组件通信',
             'vue/首屏优化',
@@ -61,7 +61,13 @@ module.exports = {
           ]
         },
         {
-          title: 'Webpack篇',
+          title: 'React',
+          children: [
+            'react/高阶组件',
+          ]
+        },
+        {
+          title: 'Webpack',
           children: [
             'webpack/构建流程',
             'webpack/使用姿势',
@@ -69,7 +75,7 @@ module.exports = {
           ]
         },
         {
-          title: '网络篇',
+          title: '网络',
           children: [
             'network/HTTP',
             'network/请求跨域',
