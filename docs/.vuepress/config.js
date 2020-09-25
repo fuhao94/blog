@@ -101,6 +101,7 @@ module.exports = {
             'interview/H5',
             'interview/铃盛',
             'interview/美团',
+            'interview/滴滴',
           ]
         },
         {
