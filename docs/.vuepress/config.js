@@ -89,21 +89,20 @@ module.exports = {
         {
           title: '算法',
           children: [
-            'algorithm/排序',
-            'algorithm/二分查找',
-            'algorithm/数组',
+            'algorithm/高频',
+            'algorithm/promise',
           ]
         },
-        {
-          title: '面试题',
-          children: [
-            'interview/JS',
-            'interview/H5',
-            'interview/铃盛',
-            'interview/美团',
-            'interview/滴滴',
-          ]
-        },
+        // {
+        //   title: '面试题',
+        //   children: [
+        //     'interview/JS',
+        //     'interview/H5',
+        //     'interview/铃盛',
+        //     'interview/美团',
+        //     'interview/滴滴',
+        //   ]
+        // },
         {
           title: '总结',
           children: [
