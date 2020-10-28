@@ -15,6 +15,12 @@ module.exports = {
     sidebar: {
       "/note/": [
         {
+          title: '工具',
+          children: [
+            'tools/工具',
+          ]
+        },
+        {
           title: 'HTML && CSS',
           children: [
             'css/选择器',
