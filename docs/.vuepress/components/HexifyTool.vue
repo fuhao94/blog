@@ -3,9 +3,13 @@
   <div>
     <div class="wp">
       <label>rgba转16进制</label>
-      <input ref="inputRef" type="text" />
+      <input type="text" ref="inputRef"/>
       <button @click="hexify">转换</button>
-      <span>{{ value }}</span>
+      <template v-if="value">
+        <span ref="copyRef">{{ value }}</span>
+        <button @click="copy">复制</button>
+        <span :style="{backgroundColor: `${value}`}" class="active"/>
+      </template>
     </div>
   </div>
 </template>
@@ -36,11 +40,21 @@
           ("0" + r.toString(16)).slice(-2) +
           ("0" + g.toString(16)).slice(-2) +
           ("0" + b.toString(16)).slice(-2);
+      },
+
+      copy() {
+        const val = this.$refs.copyRef;
+        window.getSelection().selectAllChildren(val);
+        document.execCommand("Copy");
       }
     }
   };
 </script>
 
 <style scoped>
-
+  .active {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+  }
 </style>
