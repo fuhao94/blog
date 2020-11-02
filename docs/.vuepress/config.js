@@ -69,7 +69,8 @@ module.exports = {
         {
           title: 'React',
           children: [
-            'react/高阶组件',
+            'react/概念/高阶组件',
+            'react/使用/性能优化',
           ]
         },
         {
