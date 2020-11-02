@@ -113,6 +113,7 @@ module.exports = {
           title: '总结',
           children: [
             'summary/20-09-02',
+            'summary/nEqual-serving',
           ]
         },
       ]
