@@ -1,4 +1,12 @@
-# HMR热更新
+---
+title: Webpack - HMR热更新
+author: 张福浩
+date: 2020-11-06
+categories:
+ - Webpack
+tags:
+ - 热更新
+---
 
 ## 流程
 
