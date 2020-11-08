@@ -80,11 +80,11 @@ module.exports = {
     logo: '/logo.png',
     search: true,
     searchMaxSuggestions: 10,
-    lastUpdated: 'Last Updated',
+    lastUpdated: '上次更新时间',
     author: '张福浩',
     authorAvatar: '/avatar.jpeg',
     record: 'xxxx',
-    startYear: '2017',
+    startYear: '2020',
   },
   markdown: {
     lineNumbers: true,

@@ -1,23 +1,15 @@
----
-title: Css 画一个太极图
-author: 张福浩
-date: 2020-11-08
-categories:
- - Css
-tags:
- - css
----
+<template>
+    <!--太极图-->
+    <div class="circle animated"></div>
+</template>
 
-# 画一个太极图
+<script>
+	export default {
+		name: "CssDiagram"
+	};
+</script>
 
-## 不多bb 先上效果
-
-<CssDiagram /> 
-
-## 实现
-
-```html
-<style>
+<style scoped>
     .circle {
         position: relative;
         width: 0;
@@ -28,7 +20,6 @@ tags:
         border-left: 100px solid #000;
         border-right: 100px solid #fff;
     }
-
     .circle::after {
         content: '';
         display: block;
@@ -41,7 +32,6 @@ tags:
         top: 25px;
         left: -25px;
     }
-
     .circle::before {
         content: '';
         display: block;
@@ -53,21 +43,14 @@ tags:
         position: absolute;
         left: -50px;
     }
-
     .animated {
         animation-name: round;
         animation-duration: 5s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
     }
-
     @keyframes round {
         from { transform: rotate(0) }
         to { transform: rotate(360deg) }
     }
 </style>
-
-<body>
-    <div class="circle animated"></div>
-</body>
-```

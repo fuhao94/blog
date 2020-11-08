@@ -1,4 +1,12 @@
-# Promise
+---
+title: 实现一个简易Promise
+author: 张福浩
+date: 2020-11-08
+categories:
+ - Javascript
+tags:
+ - promise
+---
 
 ## 特点
 
