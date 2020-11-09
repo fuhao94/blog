@@ -1,6 +1,7 @@
 module.exports = {
   base: '/blog/',
   title: '博客',
+  author: 'zhangfuhao',
   description: 'my blog',
   dest: 'public',
   head: [
@@ -43,15 +44,9 @@ module.exports = {
         ],
       },
       {
-        text: '联系',
-        icon: 'reco-message',
-        items: [
-          {
-            text: 'GitHub',
-            link: 'https://github.com/isEddrick',
-            icon: 'reco-github',
-          },
-        ],
+        text: 'GitHub',
+        link: 'https://github.com/isEddrick/blog',
+        icon: 'reco-github',
       },
     ],
     sidebar: {
@@ -74,18 +69,18 @@ module.exports = {
     },
     friendLink: [
       {
-        title: 'vuepress-theme-reco',
-        desc: 'A simple and beautiful vuepress Blog & Doc theme.',
-        avatar:
-          'https://vuepress-theme-reco.recoluan.com/icon_vuepress_reco.png',
-        link: 'https://vuepress-theme-reco.recoluan.com',
+        title: 'chenjiehan',
+        desc: '厦门后端扛把子',
+        logo:
+          'https://chenjiehan-blog-1259331812.cos.ap-guangzhou.myqcloud.com/image/chenjihean-blog-avatar.jpeg',
+        link: 'https://chenjiehan.club/',
       },
     ],
     logo: '/logo.png',
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: '上次更新时间',
-    author: '张福浩',
+    author: 'zhangfuhao',
     authorAvatar: '/avatar.jpeg',
     record: 'xxxx',
     startYear: '2020',
