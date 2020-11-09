@@ -1,6 +1,5 @@
 ---
 title: 单页应用 vs 多页应用
-author: 张福浩
 date: 2020-11-06
 categories:
  - Javascript

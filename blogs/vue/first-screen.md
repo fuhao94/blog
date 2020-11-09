@@ -1,6 +1,5 @@
 ---
 title: Vue - 首屏优化
-author: 张福浩
 date: 2020-11-06
 categories:
  - Vue

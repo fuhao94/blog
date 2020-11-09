@@ -1,7 +1,6 @@
 ---
 title: 网络 - 跨域
 date: 2020-11-06
-author: 张福浩
 categories:
  - 网络
 tags:

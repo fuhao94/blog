@@ -1,6 +1,5 @@
 ---
 title: 事件机制
-author: 张福浩
 date: 2020-11-06
 categories:
  - Javascript

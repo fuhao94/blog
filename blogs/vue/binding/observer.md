@@ -1,6 +1,5 @@
 ---
 title: Vue - 双向绑定原理
-author: 张福浩
 date: 2020-11-06
 categories:
  - Vue

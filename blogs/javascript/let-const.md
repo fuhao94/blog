@@ -1,6 +1,5 @@
 ---
 title: let 和 const 命令
-author: 张福浩
 date: 2020-11-06
 categories:
  - Javascript

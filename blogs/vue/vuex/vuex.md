@@ -1,6 +1,5 @@
 ---
 title: Vue - Vuex
-author: 张福浩
 date: 2020-11-06
 categories:
  - Vue

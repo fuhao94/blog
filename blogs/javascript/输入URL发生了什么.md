@@ -1,7 +1,6 @@
 ---
 title: Javascript - 输入URL发生了什么
 date: 2020-11-06
-author: 张福浩
 categories:
  - Javascript
 tags:

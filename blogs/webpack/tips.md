@@ -1,6 +1,5 @@
 ---
 title: Webpack - 一些使用姿势
-author: 张福浩
 date: 2020-11-06
 categories:
  - Webpack

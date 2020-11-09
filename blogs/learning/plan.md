@@ -1,7 +1,6 @@
 ---
 title: 学习 - 计划
 date: 2020-11-06
-author: 张福浩
 categories:
  - 计划
 tags:

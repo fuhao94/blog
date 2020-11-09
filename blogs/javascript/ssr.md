@@ -1,7 +1,6 @@
 ---
 title: 服务端渲染vs客户端渲染
 date: 2020-11-06
-author: 张福浩
 categories:
  - Javascript
 tags:

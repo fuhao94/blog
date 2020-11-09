@@ -1,6 +1,5 @@
 ---
 title: absolute 和 relative 区别
-author: 张福浩
 date: 2020-11-08
 categories:
  - Css

@@ -1,6 +1,5 @@
 ---
 title: 定时器
-author: 张福浩
 date: 2020-11-06
 categories:
  - Javascript

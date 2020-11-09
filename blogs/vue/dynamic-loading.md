@@ -1,6 +1,5 @@
 ---
 title: Vue - 动态加载并注册组件、且通过 render 动态创建该组件
-author: 张福浩
 date: 2020-11-06
 categories:
  - Vue
