@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/isEddrick/blog',
+        link: 'https://github.com/isEddrick',
         icon: 'reco-github',
       },
     ],
