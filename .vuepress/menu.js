@@ -35,7 +35,6 @@ module.exports = {
         'javascript/判断数据类型',
         'javascript/immutability',
         'javascript/let-const',
-        'javascript/设计模式/设计模式',
         'javascript/gc',
         'javascript/spa-mpa',
         'javascript/img-lazy-load',
@@ -94,6 +93,12 @@ module.exports = {
       children: [
         'algorithm/promise',
         'algorithm/高频',
+      ]
+    },
+    {
+      title: '设计模式',
+      children: [
+        '设计模式/策略模式',
       ]
     },
     {
