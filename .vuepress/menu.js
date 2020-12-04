@@ -99,6 +99,7 @@ module.exports = {
       title: '设计模式',
       children: [
         '设计模式/策略模式',
+        '设计模式/单例模式',
       ]
     },
     {
