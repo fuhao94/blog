@@ -93,7 +93,7 @@ module.exports = {
       children: [
         'algorithm/promise',
         'algorithm/高频',
-      ]
+        'algorithm/6种排序',      ]
     },
     {
       title: '设计模式',
