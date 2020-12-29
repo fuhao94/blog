@@ -46,6 +46,7 @@ module.exports = {
       title: 'TypeScript',
       children: [
         'typescript/interface和type区别',
+        'typescript/TS的一些高级类型实现',
       ]
     },
     {
