@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: 记录前端生涯
-tagline: 一个次级前端工程师的心路历程
+tagline: 一个未来骑手(也可能是滴滴司机)的前端工程师心路历程
 # heroImage: /hero.png
 # heroImageStyle: {
 #   maxWidth: '600px',
