@@ -77,7 +77,9 @@ module.exports = {
         'webpack/HMR',
         'webpack/tips',
         'webpack/process',
-        'webpack/玩转webpack系列/基础用法',
+        'webpack/webpack系列/基础用法',
+        'webpack/webpack系列/进阶用法',
+        'webpack/webpack系列/webpack构建速度和体积优化策略',
       ]
     },
     {
