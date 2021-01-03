@@ -25,7 +25,7 @@ index.html
 </script>
 ```
 
-webpack.config.js
+webpack.mpa.js
 
 ```js
 module.exports = {
