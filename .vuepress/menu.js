@@ -74,12 +74,13 @@ module.exports = {
     {
       title: 'Webpack',
       children: [
-        'webpack/HMR',
-        'webpack/tips',
-        'webpack/process',
+        // 'webpack/HMR',
+        // 'webpack/tips',
+        // 'webpack/process',
         'webpack/webpack系列/基础用法',
         'webpack/webpack系列/进阶用法',
         'webpack/webpack系列/webpack构建速度和体积优化策略',
+        'webpack/webpack系列/编写loader和plugin',
       ]
     },
     {
