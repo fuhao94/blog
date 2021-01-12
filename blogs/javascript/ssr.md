@@ -2,7 +2,7 @@
 title: 服务端渲染vs客户端渲染
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - ssr
 ---

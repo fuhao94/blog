@@ -108,12 +108,9 @@ module.exports = {
       ]
     },
     {
-      title: '总结',
+      title: 'Code',
       children: [
-        'summary/direction',
-        'summary/fixed',
-        'summary/todo',
-        'summary/nEqual-serving',
+        'interview/js-base',
       ]
     },
   ]

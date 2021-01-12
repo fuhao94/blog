@@ -2,7 +2,7 @@
 title: 原型链
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - 原型链
 ---

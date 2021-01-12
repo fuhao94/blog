@@ -2,7 +2,7 @@
 title: let 和 const 命令
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - 定义
 ---

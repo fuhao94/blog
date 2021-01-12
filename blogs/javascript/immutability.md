@@ -2,7 +2,7 @@
 title: 数据不可变性
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - 性能
 ---

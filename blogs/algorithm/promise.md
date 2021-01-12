@@ -2,7 +2,7 @@
 title: 实现一个简易Promise
 date: 2020-11-08
 categories:
- - Javascript
+ - JavaScript
 tags:
  - promise
 ---

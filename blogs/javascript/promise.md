@@ -2,7 +2,7 @@
 title: Promise
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - promise
 ---

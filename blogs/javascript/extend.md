@@ -2,7 +2,7 @@
 title: JS继承
 date: 2020-11-06
 categories:
- - Javascript
+ - JavaScript
 tags:
  - 继承
 ---
