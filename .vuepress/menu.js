@@ -69,6 +69,7 @@ module.exports = {
         'react/使用',
         'react/进阶',
         'react/hooks',
+        'react/防抖节流hooks',
       ]
     },
     {
