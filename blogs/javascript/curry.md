@@ -2,9 +2,7 @@
 title: 柯里化
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - curry
+ - JS
 ---
 
 ## 模拟实现

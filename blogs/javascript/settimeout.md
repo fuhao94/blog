@@ -2,9 +2,7 @@
 title: 定时器
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 定时器
+ - JS
 ---
 
 ## setInterval实现一个倒计时效果

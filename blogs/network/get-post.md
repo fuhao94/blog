@@ -3,8 +3,6 @@ title: 网络 - GET & POST 区别
 date: 2020-11-06
 categories:
  - 网络
-tags:
- - GET && POST
 ---
 
 > 首先get和post在本质上都是tcp链接，但由于http协议和浏览器或者服务器的限制，从而使它们在应用过程中产生了差别，但是它们中还有一个较大的区别：get在请求时发送一个数据包，会将header和data一起发送过去，而post会产生两个数据包（这个在部分浏览器不会，比如Firefox，所以应该也不是HTTP的规定，而是浏览器的行为）先发送header，服务器返回100，然后在发送data，服务器返回200

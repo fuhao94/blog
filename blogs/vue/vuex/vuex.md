@@ -3,8 +3,6 @@ title: Vue - Vuex
 date: 2020-11-06
 categories:
  - Vue
-tags:
- - Vuex
 ---
 
 ## state的模拟实现

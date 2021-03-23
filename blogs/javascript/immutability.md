@@ -2,9 +2,7 @@
 title: 数据不可变性
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 性能
+ - JS
 ---
 
 ## 不可变数据的好处

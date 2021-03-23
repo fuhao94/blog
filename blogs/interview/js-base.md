@@ -1,12 +1,3 @@
----
-title: JS 基础题
-date: 2021-01-12
-categories:
- - JavaScript
-tags:
- - JavaScript
----
-
 **BFC**
 
 **原型链**

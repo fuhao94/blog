@@ -2,9 +2,7 @@
 title: JS继承
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 继承
+ - JS
 ---
 
 ## 构造函数

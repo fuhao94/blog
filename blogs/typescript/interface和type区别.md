@@ -2,9 +2,7 @@
 title: interface 和 type 区别
 date: 2020-11-16
 categories:
- - TypeScript
-tags:
- - TypeScript
+ - TS
 ---
 
 ::: tip

@@ -3,8 +3,6 @@ title: Vue - 双向绑定原理
 date: 2020-11-06
 categories:
  - Vue
-tags:
- - Vue
 ---
 
 Vue的双向绑定是通过数据劫持和发布-订阅者功能来实现

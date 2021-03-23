@@ -3,8 +3,6 @@ title: useDebounce && useThrottle
 date: 2021-03-01
 categories:
   - React
-tags:
-  - hooks
 ---
 
 ## 防抖

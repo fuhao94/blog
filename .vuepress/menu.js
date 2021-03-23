@@ -8,6 +8,17 @@ module.exports = {
       ]
     },
     {
+      title: '学习计划',
+      children: [
+        'learning/规范化',
+        'learning/JS基础',
+        'learning/HTML&CSS',
+        'learning/框架',
+        'learning/webpack',
+        'learning/工程化&项目总结',
+      ]
+    },
+    {
       title: 'HTML && CSS',
       children: [
         'css/选择器',
@@ -106,12 +117,6 @@ module.exports = {
       children: [
         '设计模式/策略模式',
         '设计模式/单例模式',
-      ]
-    },
-    {
-      title: 'Code',
-      children: [
-        'interview/js-base',
       ]
     },
   ]

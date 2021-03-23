@@ -2,10 +2,7 @@
 title: 单页应用 vs 多页应用
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - spa
- - mpa
+ - JS
 ---
 
 对比项 \ 模式 | SPA | MPA

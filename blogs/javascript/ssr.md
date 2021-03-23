@@ -2,9 +2,7 @@
 title: 服务端渲染vs客户端渲染
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - ssr
+ - JS
 ---
 
 服务端渲染 | 客户端渲染

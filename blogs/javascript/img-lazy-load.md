@@ -2,9 +2,7 @@
 title: 图片懒加载
 date: 2020-11-11
 categories:
- - JavaScript
-tags:
- - 懒加载
+ - JS
 ---
 
 ## 背景

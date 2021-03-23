@@ -2,9 +2,7 @@
 title: 垃圾回收和内存泄漏
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - GC
+ - JS
 ---
 
 # 垃圾回收和内存泄漏

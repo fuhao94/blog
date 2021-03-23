@@ -3,8 +3,6 @@ title: Vue - Virtual DOM
 date: 2020-11-06
 categories:
  - Vue
-tags:
- - Virtual DOM
 ---
 
 ## 产生背景

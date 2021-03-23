@@ -2,9 +2,7 @@
 title: 事件机制
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 事件
+ - JS
 ---
 
 # 事件机制

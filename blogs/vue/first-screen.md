@@ -3,8 +3,6 @@ title: Vue - 首屏优化
 date: 2020-11-06
 categories:
  - Vue
-tags:
- - Vue
 ---
 
 1. webpack4的splitChunks 配合externals，意思将第三方库外置，用cdn的形式引入，可以减少打包体积。

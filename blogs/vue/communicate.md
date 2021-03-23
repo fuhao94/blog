@@ -3,8 +3,6 @@ title: Vue - 组件通信
 date: 2020-11-06
 categories:
  - Vue
-tags:
- - Vue
 ---
 
 ## EventBus通信

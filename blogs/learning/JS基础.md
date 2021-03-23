@@ -1,6 +1,8 @@
 ---
 title: JS基础
 date: 2021-03-23
+categories:
+  - JS
 ---
 
 ## JS 基础

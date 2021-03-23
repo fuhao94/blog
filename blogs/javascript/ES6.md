@@ -2,9 +2,7 @@
 title: ES6新特性
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - es6
+ - JS
 ---
 
 ## Set

@@ -2,9 +2,7 @@
 title: absolute 和 relative 区别
 date: 2020-11-08
 categories:
- - Css
-tags:
- - position
+ - CSS
 ---
 
 relative | absolute

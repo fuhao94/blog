@@ -2,9 +2,7 @@
 title: 构造函数
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - new
+ - JS
 ---
 
 ## new Function()发生了什么

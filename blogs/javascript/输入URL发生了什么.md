@@ -2,9 +2,7 @@
 title: Javascript - 输入URL发生了什么
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 渲染
+ - JS
 ---
 
 ![从URL输入到页面展现](https://img2018.cnblogs.com/blog/1626845/201909/1626845-20190906155725405-2078840564.png)

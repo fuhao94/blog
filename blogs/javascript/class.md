@@ -2,9 +2,7 @@
 title: 类的概念
 date: 2020-11-06
 categories:
- - JavaScript
-tags:
- - 类
+ - JS
 ---
 
 ## ES5的实现

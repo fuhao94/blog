@@ -2,9 +2,7 @@
 title: TS的一些高级类型实现
 date: 2020-12-29
 categories:
- - TypeScript
-tags:
- - TypeScript
+ - TS
 ---
 
 :::tip
