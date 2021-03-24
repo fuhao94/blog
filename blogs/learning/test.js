@@ -81,11 +81,37 @@ function stringify(obj) {
 const obj = {
   a: 1,
   b: [1, 2, 3],
-  c: function (params) {
+  c: undefined,
+  d: null,
+  e: Symbol('name'),
+  g: function (params) {
     return params
   },
-  d: undefined
+  [Symbol('key')]: 'symbol',
+}
+obj.f = obj.b;
+
+function cloneDeep(obj, map = new Map()) {
+  if (typeof obj === 'object' && obj !== null) {
+    let res = Array.isArray(obj) ? [] : {};
+    const symbols = Object.getOwnPropertySymbols(obj);
+    if (symbols.length > 0) {
+        symbols.forEach(sym => {
+          res[sym] = obj[sym];
+        });
+    }
+    if (map.get(obj)) {
+      return map.get(obj);
+    }
+    Object.keys(obj).forEach(key => {
+      res[key] = cloneDeep(obj[key], map)
+    });
+    map.set(obj, res);
+    return res;
+  } else {
+    return obj;
+  }
 }
 
-console.log(stringify(obj))
-
+const newObj = cloneDeep(obj);
+console.log(newObj)

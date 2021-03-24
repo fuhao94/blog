@@ -199,7 +199,7 @@ const result = [1, 2, 3].reduceMap((item, index) => item * index);
 console.log(result); // [0, 2, 6]
 ```
 
-**8. 实现一个简化版本 JSON.stringify() **
+**8. 实现一个简化版本 JSON.stringify()**
 
 ```js
 function stringify(obj) {
@@ -385,7 +385,7 @@ function myNew(construstor, ...args) {
   const obj = {};
   obj.__proto__ = construstor.prototype;
   const result = construstor.apply(obj, args);
-  return typeof result === 'object' ? result : obj;
+  return typeof result === 'object' && result !== null ? result : obj;
 }
 
 // test
@@ -426,9 +426,81 @@ function Child () {
 ```js
 // 组合继承
 // 缺点：暂无
-function Child () {
+function Child() {
   Parent.call(this)
 }
+
 Child.prototype = new Parent();
 Child.prototype.constructor = Child;
+```
+
+**15. 深拷贝**
+
+```js
+const obj = {
+  a: 1,
+  b: 'zfh',
+  c: undefined,
+  d: function () {
+    console.log('a function')
+  }
+};
+
+// 阉割版 
+// 缺点：undefined 函数 这些无法拷贝
+JSON.parse(JSON.stringify(obj));
+
+// 递归实现
+function cloneDeep(obj, map = new Map()) {
+  if (typeof obj === 'object' && obj !== null) {
+    let res = Array.isArray(obj) ? [] : {};
+    const symbols = Object.getOwnPropertySymbols(obj);
+    if (symbols.length > 0) {
+      symbols.forEach(sym => {
+        res[sym] = obj[sym];
+      });
+    }
+    if (map.get(obj)) {
+      return map.get(obj);
+    }
+    Object.keys(obj).forEach(key => {
+      res[key] = cloneDeep(obj[key], map)
+    });
+    map.set(obj, res);
+    return res;
+  } else {
+    return obj;
+  }
+}
+
+// test
+const obj = {
+  a: 1,
+  b: [1, 2, 3],
+  c: undefined,
+  d: null,
+  e: Symbol('name'),
+  g: function (params) {
+    return params
+  },
+  [Symbol('key')]: 'symbol',
+}
+obj.f = obj.b;
+const newObj = cloneDeep(obj);
+console.log(newObj) // isEqual(nweObj, obj)
+```
+
+**16. instanceof**
+
+instanceof 是用来判断 A 是否为 B 的实例
+
+```js
+function instanceof(A, B) {
+  const L = A.__proto__;
+  const R = B.prototype;
+  if(!L || !R) {
+    return false;
+  }
+  return L === R;
+}
 ```
