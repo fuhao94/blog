@@ -13,8 +13,8 @@ module.exports = {
         'learning/规范化',
         'learning/JS基础',
         'learning/HTML&CSS',
-        'learning/框架',
         'learning/webpack',
+        'learning/框架',
         'learning/工程化&项目总结',
       ]
     },

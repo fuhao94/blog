@@ -91,14 +91,14 @@ module.exports = {
   },
   plugins: {
     '@vuepress-reco/vuepress-plugin-back-to-top': {},
-    '@vuepress-reco/vuepress-plugin-kan-ban-niang': {
-      theme: ['koharu', 'miku', 'z16', 'blackCat'],
-      messages: {
-        welcome: '欢迎来到 隔壁老张头 的博客',
-        home: '心里的花，我想要带你回家。',
-        theme: '好吧帅帅，希望你能喜欢我的其他小伙伴。',
-        close: '你知道我喜欢吃什么吗？痴痴地望着你。'
-      }
-    }
+    // '@vuepress-reco/vuepress-plugin-kan-ban-niang': {
+    //   theme: ['koharu', 'miku', 'z16', 'blackCat'],
+    //   messages: {
+    //     welcome: '欢迎来到 隔壁老张头 的博客',
+    //     home: '心里的花，我想要带你回家。',
+    //     theme: '好吧帅帅，希望你能喜欢我的其他小伙伴。',
+    //     close: '你知道我喜欢吃什么吗？痴痴地望着你。'
+    //   }
+    // }
   }
 };

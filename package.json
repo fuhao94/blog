@@ -4,7 +4,7 @@
   "author": "reco_luan",
   "scripts": {
     "dev": "vuepress dev . --host \"localhost\"",
-    "publish": "bash deploy.sh"
+    "build": "bash deploy.sh"
   },
   "devDependencies": {
     "vuepress": "1.5.4",

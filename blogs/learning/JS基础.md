@@ -1,13 +1,11 @@
 ---
-title: JS基础
+title: JS 基础
 date: 2021-03-23
 categories:
   - JS
 ---
 
-## JS 基础
-
-**1. 实现 call、apply、bind**
+## 实现 call、apply、bind
 
 ```js
 Function.prototype.myCall = function (context, ...args) {
@@ -43,7 +41,7 @@ Function.prototype.myBind = function (context) {
 }
 ```
 
-**2. 前端路由**
+## 前端路由
 
 ```
 hash 模式的原理是 onhashchange 事件，可以在 window 对象上监听这个事件。
@@ -58,7 +56,7 @@ location / {
 }
 ```
 
-**3. 多个请求并发控制**
+## 多个请求并发控制
 
 有一组 URL 数组 array = [url1, url2...]，有一个获取数据的 fetch 方法，返回promise.resolve：fetch(url).then()，实现一个 execute 方法，保证同时只有 limit 个
 fetch 同时执行，后面的需要排队。
@@ -95,7 +93,7 @@ const limitLoad = (array, limit = 3) => {
 }
 ```
 
-**4. 拍平数组**
+## 拍平数组
 
 ```js
 // 拍平
@@ -125,7 +123,7 @@ flatByDep(testArr, 1);            // [1, 2, 3, [4, [5, [6]]]];
 flatByDep(testArr, Infinity);     // [1, 2, 3, 4, 5, 6];
 ```
 
-**5. forEach 如何跳出循环**
+## forEach 如何跳出循环
 
 ```js
 try {
@@ -154,7 +152,7 @@ function arrayEach(array, iteratee) {
 }
 ```
 
-**6. once 函数实现**
+## once 函数实现
 
 ```js
 function once(fn) {
@@ -183,7 +181,7 @@ initialize(); // 1
 initialize(); //
 ```
 
-**7. reduce 实现 map**
+## reduce 实现 map
 
 ```js
 Array.prototype.reduceMap = function (fn, callbackThis) {
@@ -199,7 +197,7 @@ const result = [1, 2, 3].reduceMap((item, index) => item * index);
 console.log(result); // [0, 2, 6]
 ```
 
-**8. 实现一个简化版本 JSON.stringify()**
+## 实现一个简化版本 JSON.stringify()
 
 ```js
 function stringify(obj) {
@@ -230,7 +228,7 @@ function stringify(obj) {
 }
 ```
 
-**9. 原型链**
+## 原型链
 
 概念: 每个 JS 对象在创建的时候都会关联一个对象(null除外)，这个对象就是原型，创建的对象会继承原型的属性。
 
@@ -255,7 +253,7 @@ Function.__proto__  === Function.prototype;
 Function.prototype.__proto__ ===Object.prototype;
 ```
 
-**10. 执行上下文栈**
+## 执行上下文栈
 
 ```js
 function fun3() {
@@ -300,7 +298,7 @@ ECStack.pop();
 // javascript接着执行下面的代码，但是ECStack底层永远有个globalContext
 ```
 
-**11. 词法作用域和动态作用域**
+## 词法作用域和动态作用域
 
 ```js
 // JavaScript 采用词法作用域(lexical scoping)，也就是静态作用域。
@@ -352,7 +350,7 @@ ECStack.push(<f> functionContext);
 ECStack.pop();
 ```
 
-**12. 经典闭包**
+## 经典闭包
 
 MDN: 闭包是指那些能够访问自由变量的函数。
 概念: 闭包 = 函数 + 函数能够访问的自由变量
@@ -376,7 +374,7 @@ for (var i = 0; i < 3; i++) {
 // 0 1 2
 ```
 
-**13. new**
+## new
 
 new 运算符创建一个用户定义的对象类型的实例或具有构造函数的内置对象类型之一
 
@@ -399,7 +397,7 @@ const test1 = myNew(Test1, 'zhangsan');   // { name: 'zhangsan' }
 const test2 = myNew(Test2);               // {}
 ```
 
-**14. 继承**
+## 继承
 
 ```js
 // 例子函数
@@ -434,7 +432,7 @@ Child.prototype = new Parent();
 Child.prototype.constructor = Child;
 ```
 
-**15. 深拷贝**
+## 深拷贝
 
 ```js
 const obj = {
@@ -490,17 +488,47 @@ const newObj = cloneDeep(obj);
 console.log(newObj) // isEqual(nweObj, obj)
 ```
 
-**16. instanceof**
+## instanceof
 
 instanceof 是用来判断 A 是否为 B 的实例
 
 ```js
-function instanceof(A, B) {
+function instanceOf(A, B) {
   const L = A.__proto__;
   const R = B.prototype;
-  if(!L || !R) {
+  if (!L || !R) {
     return false;
   }
   return L === R;
 }
 ```
+
+## 判断俩对象是否相等
+
+简易版
+
+```js
+export const deepEqual = (x, y) => {
+  if (x === y) {
+    return true;
+  }
+  if ((typeof x == "object" && x !== null) && (typeof y == "object" && y !== null)) {
+    if (Object.keys(x).length !== Object.keys(y).length) {
+      return false;
+    }
+    for (var prop in x) {
+      if (y.hasOwnProperty(prop)) {
+        if (!deepEqual(x[prop], y[prop])) return false;
+      } else {
+        return false;
+      }
+    }
+    return true;
+  }
+  return false;
+}
+```
+
+## 手写 Promise
+
+<<< @/blogs/learning/js/promise.js
