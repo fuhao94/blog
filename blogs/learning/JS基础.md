@@ -540,3 +540,33 @@ hub.emit('increment'); // increment = 1
 // 停止订阅
 hub.off('message', handler);
 ```
+
+
+## this
+
+New 绑定 > 显示绑定 > 隐式绑定 > 默认绑定
+
+```js
+function foo() {
+ 	console.log(this.a); 
+}
+var a = 1;
+foo(); // 默认绑定
+
+const obj = {
+  a: 2,
+  foo
+}
+obj.foo(); // 隐式绑定
+
+const obj2 = {
+  a: 3
+}
+foo.call(obj2); // 显示绑定
+const bar = foo.bind(obj); // 显示绑定 - 硬绑定
+
+function Foo(a) {
+  this.a = a;
+}
+const bar = new Foo(2); // New 绑定 
+```
