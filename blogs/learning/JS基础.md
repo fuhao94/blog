@@ -93,36 +93,6 @@ const limitLoad = (array, limit = 3) => {
 }
 ```
 
-## 拍平数组
-
-```js
-// 拍平
-const flat = (arr) => [].concat(...arr);
-
-// 深度拍平
-const flattenDeep = (arr) =>
-  arr.reduce(
-    (result, item) => (Array.isArray(item) ? result.concat(flat(item)) : result.concat([item])),
-    [],
-  );
-
-// 按层级拍平
-const flatByDep = (arr, dep) =>
-  arr.reduce(
-    (result, item) =>
-      Array.isArray(item) && dep > 0 ? result.concat(flatByDep(item, dep - 1)) : result.concat([item]),
-    [],
-  );
-
-// test
-const testArr = [1, 2, [3, [4, [5, [6]]]]];
-
-flat(testArr);                    // [1, 2, 3, [4, [5, [6]]]];
-flattenDeep(testArr);             // [1, 2, 3, 4, 5, 6];
-flatByDep(testArr, 1);            // [1, 2, 3, [4, [5, [6]]]];
-flatByDep(testArr, Infinity);     // [1, 2, 3, 4, 5, 6];
-```
-
 ## forEach 如何跳出循环
 
 ```js
@@ -532,3 +502,41 @@ export const deepEqual = (x, y) => {
 ## 手写 Promise
 
 <<< @/blogs/learning/js/promise.js
+
+
+## 简易发布/订阅
+
+```js
+const createEventHub = () => ({
+  hub: Object.create(null),
+  emit(event, data) {
+    (this.hub[event] || []).forEach(handler => handler(data));
+  },
+  on(event, handler) {
+    if (!this.hub[event]) this.hub[event] = [];
+    this.hub[event].push(handler);
+  },
+  off(event, handler) {
+    const i = (this.hub[event] || []).findIndex(h => h === handler);
+    if (i > -1) this.hub[event].splice(i, 1);
+    if (this.hub[event].length === 0) delete this.hub[event];
+  }
+});
+
+const handler = data => console.log(data);
+const hub = createEventHub();
+let increment = 0;
+
+// 订阅，监听不同事件
+hub.on('message', handler);
+hub.on('message', () => console.log('Message event fired'));
+hub.on('increment', () => increment++);
+
+// 发布：发出事件以调用所有订阅给它们的处理程序，并将数据作为参数传递给它们
+hub.emit('message', 'hello world'); // 打印 'hello world' 和 'Message event fired'
+hub.emit('message', { hello: 'world' }); // 打印 对象 和 'Message event fired'
+hub.emit('increment'); // increment = 1
+
+// 停止订阅
+hub.off('message', handler);
+```

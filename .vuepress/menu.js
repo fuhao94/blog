@@ -16,6 +16,7 @@ module.exports = {
         'learning/webpack',
         'learning/框架',
         'learning/工程化&项目总结',
+        'learning/算法',
       ]
     },
     {
