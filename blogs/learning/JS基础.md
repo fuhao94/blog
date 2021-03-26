@@ -200,13 +200,21 @@ function stringify(obj) {
 
 ## 原型链
 
-概念: 每个 JS 对象在创建的时候都会关联一个对象(null除外)，这个对象就是原型，创建的对象会继承原型的属性。
+什么是原型链？
+
+当对象查找一个属性的时候，如果没有在自身找到，那么就会查找自身的原型，如果原型还没有找到，那么会继续查找原型的原型，直到找到 Object.prototype 的原型时，此时原型为 null，查找停止。 这种通过
+通过原型链接的逐级向上的查找链被称为原型链
+
+什么是原型继承？
+
+一个对象可以使用另外一个对象的属性或者方法，就称之为继承。具体是通过将这个对象的原型设置为另外一个对象，这样根据原型链的规则，如果查找一个对象属性且在自身不存在时，就会查找另外一个对象，相当于一个对象可以使用另外一个对象的属性和方法了。
 
 ```js
 // demo
 function Person() {
 
 }
+
 // 虽然写在注释里，但是你要注意：
 // prototype是函数才会有的属性
 Person.prototype.name = 'Kevin';
@@ -219,19 +227,58 @@ Object.prototype.__proto__ === null;
 
 // 扩展
 Object.__proto__ === Function.prototype;
-Function.__proto__  === Function.prototype;
-Function.prototype.__proto__ ===Object.prototype;
+Function.__proto__ === Function.prototype;
+Function.prototype.__proto__ === Object.prototype;
+```
+
+## 区分静态、实例、原型方法
+
+方法类别 | 是否可以被 构造函数 调用 | 是否可以被 实例化对象 调用
+---|---|---
+静态方法 | Y | N
+实例方法 | N | Y
+原型方法 | N | Y
+
+```js
+// 初始化构造函数
+const Parent = function () {
+  // 添加实例方法
+  this.instanceFunc = function () {
+    console.log('可以访问实例方法');
+  }
+}
+
+// 添加静态方法
+Parent.staticFunction = function () {
+  console.log('可以访问静态方法');
+}
+// 添加原型方法
+Parent.prototype.protoFunc = function () {
+  console.log('可以访问原型方法');
+}
+// 生成实例化对象
+const parent = new Parent()
+// 方法调用测试
+console.log('/* 静态方法测试 */');
+console.log('构造函数', Parent.staticFunction); // function () { console.log('可以访问静态方法'); }
+console.log('实例化对象', parent.staticFunction); // undefined
+console.log('/* 实例方法测试 */');
+console.log('构造函数', Parent.instanceFunc); // undefined
+console.log('实例化对象', parent.instanceFunc); // function () { console.log('可以访问实例方法'); }
+console.log('/* 原型方法测试 */');
+console.log('构造函数', Parent.protoFunc); // undefined
+console.log('实例化对象', parent.protoFunc); //  function () { console.log('可以访问原型方法'); }
 ```
 
 ## 执行上下文栈
 
 ```js
 function fun3() {
-    console.log('fun3')
+  console.log('fun3')
 }
 
 function fun2() {
-    fun3();
+  fun3();
 }
 
 function fun1() {
@@ -547,17 +594,27 @@ hub.off('message', handler);
 New 绑定 > 显示绑定 > 隐式绑定 > 默认绑定
 
 ```js
+var a = 0;
+
 function foo() {
- 	console.log(this.a); 
+  console.log(this.a);
 }
-var a = 1;
-foo(); // 默认绑定
 
 const obj = {
+  a: 1,
+  fn: function () {
+    conosle.log(this.a)
+  }
+}
+foo(); // 默认绑定
+const fn = obj.fn; // 默认绑定
+fn();
+
+const obj1 = {
   a: 2,
   foo
 }
-obj.foo(); // 隐式绑定
+obj1.foo(); // 隐式绑定
 
 const obj2 = {
   a: 3
@@ -568,5 +625,26 @@ const bar = foo.bind(obj); // 显示绑定 - 硬绑定
 function Foo(a) {
   this.a = a;
 }
+
 const bar = new Foo(2); // New 绑定 
+```
+
+## `curry` 柯里化
+
+```js
+function curry(fn, ...arg1) {
+  let args = arg1 || [];
+  return function (...arg2) {
+    args = args.concat(arg2);
+    if (args.length >= fn.length) {
+      return fn.apply(this, args);
+    }
+    return curry.call(this, fn, ...args)
+  }
+}
+
+const curriedSum = curry(sum);
+curriedSum(1,2,3)   // 6
+curriedSum(2)(3)(1) // 6
+curriedSum(1,2)(3)  // 6
 ```
