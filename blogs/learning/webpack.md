@@ -78,3 +78,6 @@ utils.bundle.js | 1.05 Kib | 1 |  utils
 ps: 一般来说，一个 chunk 生成一个 bundle， utils.js -> chunks 1 -> utils.bundle.js；但也有例外，如：index.bundle.css
 
 我们直接写出来的是 module，webpack 处理时是 chunk，最后生成浏览器可以直接运行的 bundle。
+
+
+## HRM
