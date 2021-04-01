@@ -477,4 +477,5 @@ export default BusinessTable;
 
 是不是简化了很多 😬
 
-**Bye！！！**
+
+![谢谢观看](https://img0.baidu.com/it/u=1995998176,2481771798&fm=26&fmt=auto&gp=0.jpg)
