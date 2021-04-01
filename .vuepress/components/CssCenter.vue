@@ -23,8 +23,7 @@ export default {
     position: absolute;;
     top: 50%;
     left: 50%;
-    margin-left: -50px;
-    margin-top: -50px;
+    transform: translate(-50%, -50%);
 }
 .box.size{
     width: 100px;

@@ -14,9 +14,16 @@ module.exports = {
         'learning/JS基础',
         'learning/HTML&CSS',
         'learning/webpack',
+        'learning/HTTP',
         'learning/框架',
         'learning/工程化&项目总结',
         'learning/算法',
+      ]
+    },
+    {
+      title: '分享',
+      children: [
+        'share/Hooks从入门到放弃',
       ]
     },
     {
