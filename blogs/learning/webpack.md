@@ -1,6 +1,6 @@
 ---
 title: Webpack
-date: 2021-03-23
+date: 2021-03-26
 categories:
   - Webpack
 ---
@@ -79,5 +79,37 @@ ps: 一般来说，一个 chunk 生成一个 bundle， utils.js -> chunks 1 -> u
 
 我们直接写出来的是 module，webpack 处理时是 chunk，最后生成浏览器可以直接运行的 bundle。
 
+## HMR
 
-## HRM
+1. 当修改了一个或多个文件，文件系统接收更改并通知webpack；
+3. webpack compiler重新编译构建一个或多个模块，并通知HMR服务器进行更新；
+4. HMR Server 使用 webSocket 通知HMR runtime 需要更新，HMR运行时通过HTTP请求更新jsonp；
+5. HMR运行时替换更新中的模块，如果确定这些模块无法更新，则触发整个页面刷新。
+
+## sourceMap
+
+sourceMap 是一项将编译、打包、压缩后的代码映射回源代码的技术，由于打包压缩后的代码并没有阅读性可言，
+sourceMap 可以帮助我们快速定位到源代码的位置，提高我们的开发效率。
+sourceMap 其实并不是 Webpack 特有的功能，而是 Webpack 支持 sourceMap，像 JQuery 也支持 sourceMap。
+
+映射表通常以 `.map` 结尾，大概为：
+
+```
+{
+  "version" : 3,                          // Source Map版本
+  "file": "out.js",                       // 输出文件（可选）
+  "sourceRoot": "",                       // 源文件根目录（可选）
+  "sources": ["foo.js", "bar.js"],        // 源文件列表
+  "sourcesContent": [null, null],         // 源内容列表（可选，和源文件列表顺序一致）
+  "names": ["src", "maps", "are", "fun"], // mappings使用的符号名称列表
+  "mappings": "A,AAAB;;ABCDE;"            // 带有编码映射数据的字符串
+}
+```
+
+mappings 规则
+
+* 生成文件中的一行的每个组用“;”分隔；
+* 每一段用“,”分隔；
+* 每个段由1、4或5个可变长度字段组成；
+
+**development 开发模式下，每个 __webpack_modules__ 文件模块的代码最末端，都会加上 `//# sourceURL=webpack://file-path?`，从而实现对 sourceMap 的支持**

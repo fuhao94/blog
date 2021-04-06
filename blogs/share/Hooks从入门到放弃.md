@@ -1,6 +1,6 @@
 ---
 title: hooks 从入门到放弃 
-date: 2021-04-01
+date: 2021-04-02
 categories:
   - 分享
 ---
@@ -19,11 +19,11 @@ categories:
 
 ### `class组件`和`函数组件`对比
 
-1. function 组件每次渲染都会有独立 props/state,而 class 组件总是会通过 this 拿到最新的 props/state
+1. FC 组件每次渲染都会有独立 props/state,而 class 组件总是会通过 this 拿到最新的 props/state
    
 [戳这里 体验差别](https://codesandbox.io/s/pjqnl16lm7?file=/src/index.js:730-749)
 
-2. function 组件逻辑聚合，而 class 组件逻辑分散
+2. FC 组件逻辑聚合，而 class 组件逻辑分散
    
 ```js
 // class
@@ -34,12 +34,12 @@ componentDidMount() {
 }
 
 componentWillUnmount() {
-  this.timer && clearTimeout(this.timer)
+  clearTimeout(this.timer)
 }
 ```
 
 ```js
-// function
+// FC
 useEffect(() => {
   const timer = setTimeout(() => {
     console.log('开启定时器');
@@ -51,7 +51,7 @@ useEffect(() => {
 }, [])
 ```
 
-3. function 组件逻辑复用简单，而 class 组件逻辑复用困难
+3. FC 组件逻辑复用简单，而 class 组件逻辑复用困难
 
 * class 组件的逻辑复用方案包括 `render props` 和 `HOC`，但是这类方案都是将逻辑封装到一个抽象层的组件中，在使用多个复用逻辑时会形成抽象层组件的**嵌套地狱**。
 * `HOC` 和 `render props` 都会改变原先的组件结构，而 `hook` 可以使你在无需修改组件结构的情况下复用状态逻辑。
@@ -60,16 +60,18 @@ useEffect(() => {
 
 [戳这里 在线编辑](https://codesandbox.io/s/exciting-bas-b7fs9?file=/src/index.js)
 
-**ps：到时候 直接手撸一个 实现一下**
-
 ### Demo
 
 ```js
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Example() {
   // 声明一个叫 “count” 的 state 变量。
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('count:', count)
+  }, [count])
 
   return (
     <div>
@@ -89,8 +91,8 @@ export default function Example() {
 
 1. 从 demo 中可以看出 一个 useState 的基本结构，它接收一个初始值，返回一个状态和一个改变状态的函数
 2. 状态存储的实现
-* 新状态替换旧状态
-* 重新渲染组件
+    * 新状态替换旧状态
+    * 重新渲染组件
 3. 多个 state 并存
 
 ```js
@@ -206,7 +208,7 @@ useEffect(() => {
 ```
 
 1. State Hook 使得组件内的状态的设置和更新相对独立，这样便于对这些状态复用。
-2. Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据），而并非强制按照生命周期划分，这样使得各个逻辑相对独立和清晰。https://github.com/facebook/react/issues/15156#issuecomment-474590693
+2. Hook 将组件中相互关联的部分拆分成更小的函数（比如设置订阅或请求数据），而并非强制按照生命周期划分，这样使得各个逻辑相对独立和清晰。
 
 ## 常用的一些 hooks
 
