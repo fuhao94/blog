@@ -167,6 +167,8 @@ componentDidMount | useEffect 第二个参数为 [] | 在第一次渲染后调�
 componentDidUpdate | useEffect 配合 useRef | 在组件完成更新后立即调用。在初始化时不会被调用
 componentWillUnmount | useEffect 里面返回的函数 | 在组件从 DOM 中移除之前立刻被调用
 
+> 我们给 Hook 设定的目标是尽早覆盖 class 的所有使用场景。目前暂时还没有对应不常用的 getSnapshotBeforeUpdate，getDerivedStateFromError 和 componentDidCatch 生命周期的 Hook 等价写法，但我们计划尽早把它们加进来。
+
 ```js
 import { useEffect, useState } from 'react';
 
@@ -306,6 +308,20 @@ static contextType = MyContext;
 调用了 useContext 的组件总会在 context 值变化时重新渲染。如果重渲染组件的开销较大，你可以 [通过使用 memoization 来优化](https://github.com/facebook/react/issues/15156#issuecomment-474590693)。
 
 ## 自定义 Hook
+
+### useFirstRender
+
+```js
+function useFirstRender() {
+  const initialRef = useRef(true);
+  
+  useEffect(() => {
+     initialRef.current = false;
+  }, []);
+  
+  return [initialRef.current]
+}
+```
 
 ### useTable
 
