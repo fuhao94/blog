@@ -27,7 +27,6 @@ const dailyTemperatures = (T) => {
       res[i] = stack[stack.length - 1] - i
     }
     stack.push(i)
-    console.log(JSON.stringify({i, res, stack}))
   }
   return res
 }
