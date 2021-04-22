@@ -3,7 +3,7 @@ const sidebar = require('./menu');
 module.exports = {
   base: '/blog/',
   title: '博客',
-  author: '隔壁老张头',
+  author: 'Jimmy',
   description: 'my blog',
   dest: 'public',
   head: [
@@ -81,7 +81,7 @@ module.exports = {
     search: true,
     searchMaxSuggestions: 10,
     lastUpdated: '上次更新时间',
-    author: '隔壁老张头',
+    author: 'Jimmy',
     authorAvatar: '/avatar.jpeg',
     record: 'xxxx',
     startYear: '2020',
