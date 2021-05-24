@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas - physics</title>
+</head>
+<body>
+<canvas id="canvas" style="border: 1px solid #aaa; display: block; margin: 50px auto"></canvas>
+
+<script>
+  const WINDOW_WIDTH = 1024;
+  const WINDOW_HEIGHT = 500;
+  const ball = {x: 1024, y: 100, r: 20, g: 1, vx: -4, vy: 0, color: '#005588'};
+
+  window.onload = function () {
+    const canvas = document.getElementById('canvas');
+    canvas.width = WINDOW_WIDTH;
+    canvas.height = WINDOW_HEIGHT;
+    const context = canvas.getContext('2d');
+
+    setInterval(() => {
+      render(context);
+      update();
+    }, 16.7);
+  }
+
+  function update() {
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+    ball.vy += ball.g;
+
+    // if (ball.x <= ball.r || ball.x >= WINDOW_WIDTH - ball.r) {
+    //   ball.vx = -ball.vx;
+    // }
+
+    if (ball.y >= WINDOW_HEIGHT - ball.r) {
+      ball.y = WINDOW_HEIGHT - ball.r;
+      ball.vy = -ball.vy * 0.5;
+    }
+  }
+
+  function render(ctx) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    ctx.fillStyle = ball.color;
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.r, 0, 2 * Math.PI);
+    ctx.closePath();
+
+    ctx.fill();
+  }
+</script>
+</body>
+</html>

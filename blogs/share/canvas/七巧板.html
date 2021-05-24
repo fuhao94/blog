@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas - 七巧板</title>
+  <style>
+      .canvas {
+          border: 1px solid #ccc;
+      }
+  </style>
+</head>
+<body>
+<canvas id="canvas" class="canvas"></canvas>
+
+<script>
+  const areas = [
+    {coordinate: [{x: 0, y: 0}, {x: 800, y: 0}, {x: 400, y: 400}], color: "#caff67"},
+    {coordinate: [{x: 0, y: 0}, {x: 400, y: 400}, {x: 0, y: 800}], color: "#67becf"},
+    {coordinate: [{x: 800, y: 0}, {x: 800, y: 400}, {x: 600, y: 600}, {x: 600, y: 200}], color: "#ef3d61"},
+    {coordinate: [{x: 600, y: 200}, {x: 600, y: 600}, {x: 400, y: 400}], color: "#f9f51a"},
+    {coordinate: [{x: 400, y: 400}, {x: 600, y: 600}, {x: 400, y: 800}, {x: 200, y: 600}], color: "#a594c0"},
+    {coordinate: [{x: 200, y: 600}, {x: 400, y: 800}, {x: 0, y: 800}], color: "#fa8ecc"},
+    {coordinate: [{x: 800, y: 400}, {x: 800, y: 800}, {x: 400, y: 800}], color: "#f6ca29"}
+  ];
+  window.onload = function () {
+    const canvas = document.getElementById('canvas');
+    const context = canvas.getContext('2d');
+
+    canvas.width = 800;
+    canvas.height = 800;
+
+    for (let i = 0; i < areas.length; i++) {
+      draw(areas[i], context)
+    }
+  }
+
+  function draw(place, ctx) {
+    ctx.beginPath();
+    ctx.moveTo(place.coordinate[0].x, place.coordinate[0].y);
+    for (let i = 1; i < place.coordinate.length; i++) {
+      ctx.lineTo(place.coordinate[i].x, place.coordinate[i].y);
+    }
+    ctx.closePath();
+
+    ctx.fillStyle = place.color;
+    ctx.fill();
+
+    // 添加边线
+    // ctx.strokeStyle = 'black';
+    // ctx.lineWidth = 3;
+    // ctx.stroke();
+  }
+</script>
+</body>
+</html>
