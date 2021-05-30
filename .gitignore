@@ -14,3 +14,5 @@ package-lock.json
 .vscode
 
 .nyc_output
+
+/interview

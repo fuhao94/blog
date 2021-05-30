@@ -129,11 +129,5 @@ module.exports = {
         '设计模式/单例模式',
       ]
     },
-    {
-      title: '招人',
-      children: [
-        'interview/AIO-面试',
-      ]
-    },
   ]
 };
