@@ -41,6 +41,7 @@ module.exports = {
       children: [
         'javascript/ES6',
         'javascript/class',
+        'javascript/this',
         'javascript/promise',
         'javascript/extend',
         'javascript/closure',
@@ -131,7 +132,7 @@ module.exports = {
     {
       title: '招人',
       children: [
-        'interview/部门面试',
+        'interview/AIO-面试',
       ]
     },
   ]
