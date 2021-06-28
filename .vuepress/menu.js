@@ -11,6 +11,7 @@ module.exports = {
       title: '学习计划',
       children: [
         'learning/规范化',
+        'learning/202106',
         'learning/JS基础',
         'learning/HTML&CSS',
         'learning/webpack',
