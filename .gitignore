@@ -13,3 +13,5 @@ package-lock.json
 .vscode
 
 .nyc_output
+
+/blogs/interview
