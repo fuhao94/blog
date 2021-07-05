@@ -96,16 +96,18 @@ export default function Example() {
 3. 多个 state 并存
 
 ```js
-let state;
+let memoizedState = [];
+let currentHook = 0;
 
 function useState(initialValue) {
-  state = state || initialValue;
-  const setState = (value) => {
-    state = value;
-    // 触发视图重新渲染
-    render();
-  };
-  return [state, setState];
+   const currentIndex = currentHook;
+   memoizedState[currentIndex] = memoizedState[currentIndex] || initialValue;
+   const setState = (value) => {
+      memoizedState[currentIndex] = value;
+      render();
+   };
+   currentHook++;
+   return [memoizedState[currentIndex], setState];
 }
 ```
 
@@ -132,20 +134,21 @@ A：hooks 数组是按 hook 定义的顺序来放置数据的，如果 hook 顺�
 3. 如果 dependencies 存在，只有当它发生了变化， callback 才会执行
 
 ```js
-let deps;
+let memoizedState = [];
+let currentHook = 0;
 
 function useEffect(callback, depArray) {
-  // 如果 dependencies 不存在
-  const shouldUpdate = !depArray;
-  // 两次的 dependencies 是否完全相等
-  const depsChange = deps
-    ? !depArray.every((depItem, index) => depItem === deps[index])
-    : true;
-  /* 如果 dependencies 不存在，或者 dependencies 有变化*/
-  if (shouldUpdate || depsChange) {
-    callback();
-    deps = depArray;
-  }
+   const shouldUpdate = !depArray;
+   const index = currentHook;
+   const deps = memoizedState[index];
+   const depChange = deps
+           ? !deps.every((depItem, i) => depItem === depArray[i])
+           : true;
+   if (depChange || shouldUpdate) {
+      callback();
+      memoizedState[index] = depArray;
+   }
+   currentHook++;
 }
 ```
 

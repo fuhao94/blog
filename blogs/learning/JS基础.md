@@ -7,6 +7,8 @@ categories:
 
 ## 实现 call、apply、bind
 
+[详细讲解](https://github.com/mqyqingfeng/Blog/issues/11)
+
 ```js
 Function.prototype.myCall = function (context, ...args) {
   // 传入null、指向window

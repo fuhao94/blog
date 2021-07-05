@@ -1,8 +1,8 @@
 ---
 title: 招人啦~
-date: 2021-05-18
+date: 2021-06-29
 keys:
-- '670b14728ad9902aecba32e22fa4f6bd'
+ - '670b14728ad9902aecba32e22fa4f6bd'
 ---
 
 ## JS
@@ -66,7 +66,7 @@ console.log('start');
 
 * display: none / opacity: 0 / visibility: hidden / pointer-events: none 作用是什么?
 * 垂直居中实现方案
-* BFC含义和应用
+* BFC(块级格式化上下文)含义和应用
 * z-index 什么时候会生效？
 * % 相对于谁？ `height: 50%`
 * rem vw vh 概念
@@ -307,6 +307,10 @@ function sum<T extends Number | String>(x: T, y: T): T {
 
 * webpack编译过程
 * loader 和 plugin 区别？多个loader时，调用顺序是怎么样的？ 写过 loader 和 plugin 吗？
+
+## babel
+
+* preset的作用，和plugin的关系
 
 ## Http
 

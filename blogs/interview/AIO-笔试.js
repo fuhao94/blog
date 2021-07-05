@@ -42,31 +42,28 @@ new new Foo().getName();  // 3
  *
  * --- 实例 ---
  *
- * 输入：
- * function test(n) {
- *   return n*n;
+ * const obj = {
+ *   n: 3,
+ *   test: function (x) {
+ *     return this.n + x;
+ *   }
  * }
- * const fn = once(test);
- * fn(1);
- * fn(2);
- * 输出：
- * 第一次：1
- * 第二次：1
+ * obj.fn = once(obj.test);
+ * obj.fn(1); // 4
+ * obj.fn(2); // 4
+ * obj.fn(3); // 4
  */
 function once(fn) {
-  let run = false;
   let result;
 
   return function () {
-    if (run) {
-      run = true;
+    if (result !== undefined) {
       return result;
     }
     result = fn.apply(this, arguments);
     return result;
   }
 }
-
 
 /**
  * 深拷贝
