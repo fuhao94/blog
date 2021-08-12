@@ -6,10 +6,10 @@ categories:
 ---
 
 :::tip
-1. [webpack系列（一）基础用法](https://iseddrick.github.io/blog/blogs/webpack/webpack系列/基础用法.html)
-2. [webpack系列（二）进阶用法](https://iseddrick.github.io/blog/blogs/webpack/webpack系列/进阶用法.html)
-3. [webpack系列（三）webpack构建速度和体积优化策略](https://iseddrick.github.io/blog/blogs/webpack/webpack系列/webpack构建速度和体积优化策略.html)
-4. [webpack系列（四）编写loader和plugin](https://iseddrick.github.io/blog/blogs/webpack/webpack系列/编写loader和plugin.html)
+1. [webpack系列（一）基础用法](https://fuhao94.github.io/blog/blogs/webpack/webpack系列/基础用法.html)
+2. [webpack系列（二）进阶用法](https://fuhao94.github.io/blog/blogs/webpack/webpack系列/进阶用法.html)
+3. [webpack系列（三）webpack构建速度和体积优化策略](https://fuhao94.github.io/blog/blogs/webpack/webpack系列/webpack构建速度和体积优化策略.html)
+4. [webpack系列（四）编写loader和plugin](https://fuhao94.github.io/blog/blogs/webpack/webpack系列/编写loader和plugin.html)
 :::
 
 ## loader

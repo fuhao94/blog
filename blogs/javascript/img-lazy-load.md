@@ -14,14 +14,14 @@ categories:
 首先，先不给图片设置src，出现在可视区域的时候，动态设置src。大致是这样：
 
 ```js 
-<img data-src="https://iseddrick.github.io/blog/avatar.jpeg" />
+<img data-src="https://fuhao94.github.io/blog/avatar.jpeg" />
 ```
 
 这样图片就不会先加载，等滚动到的时候：
 
 ```js
 const img = document.querySelector('img');
-img.src = 'https://iseddrick.github.io/blog/avatar.jpeg';
+img.src = 'https://fuhao94.github.io/blog/avatar.jpeg';
 ```
 
 这样就能加载了。

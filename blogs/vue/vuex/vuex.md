@@ -96,6 +96,6 @@ export class Store {
 
 参考文件-常见题目：[常见面试题](https://tech.meituan.com/2017/04/27/vuex-code-analysis.html)
 
-文中示例-入口文件 [main.js](https://github.com/isEddrick/blog/blob/master/docs/note/vue/vuex/main.js)
+文中示例-入口文件 [main.js](https://github.com/fuhao94/blog/blob/master/docs/note/vue/vuex/main.js)
 
-文中示例-模拟store [store.js](https://github.com/isEddrick/blog/blob/master/docs/note/vue/vuex/store.js)
+文中示例-模拟store [store.js](https://github.com/fuhao94/blog/blob/master/docs/note/vue/vuex/store.js)
