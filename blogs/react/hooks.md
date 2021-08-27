@@ -93,7 +93,7 @@ function MultipleStates() {
 
 ### 自定义 hooks
 
-这就是一个简单的自定义`hooks`
+1. `useQuery`
 
 ```typescript
 export default function useQuery {
@@ -133,6 +133,56 @@ export default function useQuery {
 
 另外，通过在自定义hooks中调用自定义`hooks`，可以将`hooks`组合在一起。`hooks`只是函数，当然，函数可以调用其他函数。
 
+2. `useDebounce`
+
+```js
+import { useEffect, useRef } from 'react'
+
+const useDebounce = (fn, ms = 30, deps = []) => {
+  let timeout = useRef();
+  useEffect(() => {
+    if (timeout.current) clearTimeout(timeout.current);
+    timeout.current = setTimeout(() => {
+      fn();
+    }, ms)
+  }, deps)
+
+  const cancel = () => {
+    clearTimeout(timeout.current);
+    timeout = null;
+  }
+
+  return [cancel]
+}
+
+export default useDebounce;
+```
+
+3. `useThrottle`
+
+```js
+import { useEffect, useRef, useState } from 'react'
+
+const useThrottle = (fn, ms = 30, deps = []) => {
+    let previous = useRef(0);
+    let [time, setTime] = useState(ms);
+    useEffect(() => {
+        let now = Date.now();
+        if (now - previous.current > time) {
+            fn();
+            previous.current = now;
+        }
+    }, deps)
+
+    const cancel = () => {
+        setTime(0);
+    }
+  
+    return [cancel];
+  }
+
+export default useThrottle;
+```
 
 ## 总结
 
