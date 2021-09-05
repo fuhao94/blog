@@ -26,6 +26,7 @@ module.exports = {
       children: [
         'share/Hooks从入门到放弃',
         'share/算法分享v1',
+        'share/可视化',
       ]
     },
     {
