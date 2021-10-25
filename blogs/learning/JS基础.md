@@ -559,7 +559,7 @@ function execute(array, limit = 5) {
   }
 }
 
-// Promise.rice 写法
+// Promise.race 写法
 const limitLoad = (array, limit = 3) => {
   const sequence = [...array];
   let promises = sequence.splice(0, limit).map((url, index) =>

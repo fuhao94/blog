@@ -12,6 +12,9 @@ module.exports = {
       children: [
         'learning/规范化',
         'learning/202106',
+        'learning/202108',
+        'learning/202109',
+        'learning/202110',
         'learning/JS基础',
         'learning/HTML&CSS',
         'learning/webpack',
