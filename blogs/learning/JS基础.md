@@ -501,12 +501,13 @@ instanceof 是用来判断 A 是否为 B 的实例
 
 ```js
 function instanceOf(A, B) {
-  const L = A.__proto__;
+  let L = Object.getPrototypeOf(A);
   const R = B.prototype;
-  if (!L || !R) {
-    return false;
+  while (L !== null) {
+    if (L === R) return true;
+    L = Object.getPrototypeOf(L);
   }
-  return L === R;
+  return false;
 }
 ```
 
