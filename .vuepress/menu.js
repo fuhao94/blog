@@ -12,6 +12,7 @@ module.exports = {
       children: [
         'learning/规范化',
         'learning/202203',
+        'learning/202202',
         'learning/202110',
         'learning/202109',
         'learning/202108',
