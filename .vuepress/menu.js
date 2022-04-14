@@ -11,6 +11,7 @@ module.exports = {
       title: '学习计划',
       children: [
         'learning/规范化',
+        'learning/202204',
         'learning/202203',
         'learning/202202',
         'learning/202110',
@@ -32,6 +33,7 @@ module.exports = {
         'share/Hooks从入门到放弃',
         'share/算法分享v1',
         'share/可视化',
+        'share/Vue2项目迁移Vite实践',
       ]
     },
     {
