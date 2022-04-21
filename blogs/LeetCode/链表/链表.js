@@ -38,3 +38,4 @@ node2.next = list.head;
 list.head = node2;
 
 console.log(list.find(node));
+console.log(list);
