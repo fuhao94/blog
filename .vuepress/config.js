@@ -82,7 +82,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     lastUpdated: '上次更新时间',
     author: '黄焖Jimmy饭',
-    authorAvatar: '/avatar.jpeg',
+    authorAvatar: '/avatar.jpg',
     record: 'xxxx',
     startYear: '2020',
   },
