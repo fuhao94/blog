@@ -34,6 +34,7 @@ module.exports = {
         'share/算法分享v1',
         'share/可视化',
         'share/Vue2项目迁移Vite实践',
+        'share/视频监控相关功能实现',
       ]
     },
     {
