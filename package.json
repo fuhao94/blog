@@ -4,9 +4,12 @@
   "author": "reco_luan",
   "scripts": {
     "start": "vuepress dev . --host \"localhost\"",
-    "build": "bash deploy.sh"
+    "build": "bash deploy.sh",
+    "build:site": "vuepress build .",
+    "deploy": "gh-pages -d public -b gh-pages -f"
   },
   "devDependencies": {
+    "gh-pages": "^6.0.0",
     "vuepress": "1.5.4",
     "vuepress-theme-reco": "1.5.7"
   },
