@@ -4,8 +4,7 @@
   "author": "reco_luan",
   "scripts": {
     "start": "vuepress dev . --host \"localhost\"",
-    "build": "bash deploy.sh",
-    "build:site": "vuepress build .",
+    "build": "vuepress build .",
     "deploy": "gh-pages -d public -b gh-pages -f"
   },
   "devDependencies": {
